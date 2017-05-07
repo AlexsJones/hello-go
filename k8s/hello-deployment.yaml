@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-go
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: hello-go
@@ -15,7 +15,7 @@ spec:
         app: hello-go
     spec:
       containers:
-        - image: tibbar/hello-go:v2
+        - image: tibbar/hello-go:latest
           imagePullPolicy: Always
           name: hello-go
           ports:
